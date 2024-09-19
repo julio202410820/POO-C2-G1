@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
 <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="585.0" prefWidth="1026.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu._enraya.control.TictacControl">
    <children>
-      <Pane layoutY="81.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="490.0" prefWidth="323.0">
+      <Pane layoutY="73.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="514.0" prefWidth="320.0" style="-fx-background-color: #1a1a1a;">
          <children>
             <GridPane layoutX="14.0" layoutY="14.0" prefHeight="294.0" prefWidth="294.0">
               <columnConstraints>
@@ -20,43 +21,76 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button fx:id="btn00" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#accionButon" />
-                  <Button fx:id="btn01" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#accionButon" GridPane.columnIndex="1" />
-                  <Button fx:id="btn02" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#accionButon" GridPane.columnIndex="2" />
-                  <Button fx:id="btn10" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#accionButon" GridPane.rowIndex="1" />
-                  <Button fx:id="btn11" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#accionButon" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Button fx:id="btn12" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#accionButon" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <Button fx:id="btn20" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#accionButon" GridPane.rowIndex="2" />
-                  <Button fx:id="btn21" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#accionButon" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <Button fx:id="btn22" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#accionButon" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Button fx:id="btn00" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#accionButon" style="-fx-background-color: #464444; -fx-border-color: #fff201;" textFill="#fff201">
+                     <font>
+                        <Font name="System Bold" size="48.0" />
+                     </font></Button>
+                  <Button fx:id="btn01" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#accionButon" style="-fx-background-color: #464444; -fx-border-color: #fff201;" textFill="#fff201" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="System Bold" size="48.0" />
+                     </font></Button>
+                  <Button fx:id="btn02" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#accionButon" style="-fx-background-color: #464444; -fx-border-color: #fff201;" textFill="#fff201" GridPane.columnIndex="2">
+                     <font>
+                        <Font name="System Bold" size="48.0" />
+                     </font></Button>
+                  <Button fx:id="btn10" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#accionButon" style="-fx-background-color: #464444; -fx-border-color: #fff201;" textFill="#fff201" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="48.0" />
+                     </font></Button>
+                  <Button fx:id="btn11" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#accionButon" style="-fx-background-color: #464444; -fx-border-color: #fff201;" textFill="#fff201" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="48.0" />
+                     </font></Button>
+                  <Button fx:id="btn12" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#accionButon" style="-fx-background-color: #464444; -fx-border-color: #fff201;" textFill="#fff201" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="48.0" />
+                     </font></Button>
+                  <Button fx:id="btn20" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#accionButon" style="-fx-background-color: #464444; -fx-border-color: #fff201;" textFill="#fff201" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="48.0" />
+                     </font></Button>
+                  <Button fx:id="btn21" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#accionButon" style="-fx-background-color: #464444; -fx-border-color: #fff201;" textFill="#fff201" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="48.0" />
+                     </font></Button>
+                  <Button fx:id="btn22" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#accionButon" style="-fx-background-color: #464444; -fx-border-color: #fff201;" textFill="#fff201" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="System Bold" size="48.0" />
+                     </font></Button>
                </children>
             </GridPane>
-            <Label layoutX="29.0" layoutY="335.0" prefHeight="36.0" prefWidth="63.0" text="Turno">
+            <Label layoutX="29.0" layoutY="335.0" prefHeight="36.0" prefWidth="63.0" text="Turno" textFill="#fff201">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label layoutX="29.0" layoutY="381.0" prefHeight="17.0" prefWidth="72.0" text="Jugador 1:" />
-            <Label layoutX="29.0" layoutY="404.0" prefHeight="17.0" prefWidth="63.0" text="Jugador 2:" />
+            <Label layoutX="29.0" layoutY="381.0" prefHeight="17.0" prefWidth="72.0" text="Jugador 1:" textFill="#fff201" />
+            <Label layoutX="29.0" layoutY="404.0" prefHeight="17.0" prefWidth="63.0" text="Jugador 2:" textFill="#fff201" />
+            <Label layoutX="101.0" layoutY="381.0" prefHeight="17.0" prefWidth="121.0" text="Proximamente" textFill="#fff201" />
+            <Label layoutX="101.0" layoutY="404.0" prefHeight="17.0" prefWidth="135.0" text="Proximamente" textFill="#fff201" />
          </children>
       </Pane>
-      <Pane layoutX="320.0" layoutY="93.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="483.0" prefWidth="698.0">
+      <Pane layoutX="320.0" layoutY="73.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="514.0" prefWidth="698.0" style="-fx-background-color: #1a1a1a;">
          <children>
             <Button layoutX="14.0" layoutY="86.0" mnemonicParsing="false" onAction="#Iniciar" prefHeight="46.0" prefWidth="72.0" text="Iniciar" />
             <Button layoutX="95.0" layoutY="86.0" mnemonicParsing="false" onAction="#Anular" prefHeight="46.0" prefWidth="72.0" text="Anular" />
-            <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="128.0" text="Nombre de Jugador 1:" />
-            <Label layoutX="14.0" layoutY="44.0" prefHeight="17.0" prefWidth="128.0" text="Nombre de Jugador 2:" />
-            <TextField fx:id="jug1" layoutX="142.0" layoutY="10.0" />
-            <TextField fx:id="jug2" layoutX="142.0" layoutY="40.0" />
-            <TableView fx:id="tableView" layoutX="5.0" layoutY="162.0" prefHeight="316.0" prefWidth="681.0">
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="128.0" text="Nombre de Jugador 1:" textFill="#fff201" />
+            <Label layoutX="14.0" layoutY="44.0" prefHeight="17.0" prefWidth="128.0" text="Nombre de Jugador 2:" textFill="#fff201" />
+            <TextField fx:id="jug1" layoutX="142.0" layoutY="10.0" style="-fx-border-color: #fff201;" />
+            <TextField fx:id="jug2" layoutX="142.0" layoutY="40.0" style="-fx-border-color: #fff201;" />
+            <TableView fx:id="tableView" layoutX="5.0" layoutY="162.0" prefHeight="316.0" prefWidth="681.0" style="-fx-background-color: #1a1a1a;">
               <columns>
                 <TableColumn fx:id="nomP" maxWidth="-1.0" minWidth="105.0" prefWidth="105.0" text="Nombre Partida" />
-                <TableColumn fx:id="nom1" maxWidth="-1.0" minWidth="110.0" prefWidth="115.0" text="Nombre jugador 1" />
-                <TableColumn fx:id="nom2" maxWidth="-1.0" minWidth="110.0" prefWidth="115.0" text="Nombre jugador 2" />
-                <TableColumn fx:id="nomG" maxWidth="-1.0" minWidth="115.0" prefWidth="125.0" text="Nombre ganador" />
+                <TableColumn fx:id="nom1" maxWidth="-1.0" minWidth="115.0" prefWidth="115.0" sortable="false" text="Nombre jugador 1" />
+                <TableColumn fx:id="nom2" maxWidth="-1.0" minWidth="115.0" prefWidth="115.0" text="Nombre jugador 2" />
+                <TableColumn fx:id="nomG" maxWidth="-1.0" minWidth="125.0" prefWidth="125.0" text="Nombre ganador" />
                 <TableColumn fx:id="Punt" maxWidth="-1.0" minWidth="105.0" prefWidth="105.0" text="Puntuación" />
-                <TableColumn fx:id="Estad" maxWidth="-1.0" minWidth="105.0" prefWidth="105.0" text="Estado" />
+                <TableColumn fx:id="Estad" maxWidth="-1.0" minWidth="115.0" prefWidth="105.0" text="Estado" />
               </columns>
+
             </TableView>
          </children></Pane>
    </children>

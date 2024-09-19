@@ -26,20 +26,43 @@ public class TictacControl {
 
     Button[][] tablero;
     @FXML
-    private Button Iniciar, Anular;
+    TableView<TicTO> tableView;
+
+    @FXML
+    TableColumn<TicTO, String> nomP, nom1, nom2, nomG,Punt, Estad;
+
+    private ObservableList<TicTO> ticTOList;
+    private int inexEdit;
+
+
+
 
     @FXML
     public void initialize() {
         System.out.println("holas");
+        ticTOList = FXCollections.observableArrayList();
+        tableView.setItems(ticTOList);
+        nomP.setCellValueFactory(new PropertyValueFactory<>("nombrePartida"));
+        nom1.setCellValueFactory(new PropertyValueFactory<>("nombreJugador1"));
+        nom2.setCellValueFactory(new PropertyValueFactory<>("nombreJugador2"));
+        nomG.setCellValueFactory(new PropertyValueFactory<>("ganador"));
+        Punt.setCellValueFactory(new PropertyValueFactory<>("punto"));
+        Estad.setCellValueFactory(new PropertyValueFactory<>("estado"));
+
 
         tablero = new Button[][]{
                 {btn00, btn01, btn02},
                 {btn10, btn11, btn12},
                 {btn20, btn21, btn22}
         };
-        Anular();
 
+
+        Anular();
     }
+
+
+
+
 
     @FXML
     Button btn00, btn01, btn02, btn10, btn11, btn12, btn20, btn21, btn22;
@@ -50,18 +73,6 @@ public class TictacControl {
     private TextField jug1;
     @FXML
     private TextField jug2;
-
-    @FXML
-    private void jugador1() {
-        String Jug1 = jug1.getText();
-        System.out.println(Jug1);
-    }
-
-    @FXML
-    private void jugador2() {
-        String Jug2 = jug2.getText();
-        System.out.println(Jug2);
-    }
 
 
     @FXML
@@ -82,18 +93,19 @@ public class TictacControl {
         // Verifica combinaciones para "X"
         if (checkWinner("X")) {
             System.out.println("Gana X");
+            storeResult("X");
             Anular();
         }
         // Verifica combinaciones para "O"
         else if (checkWinner("O")) {
             System.out.println("Gana O");
+            storeResult("O");
             Anular();
-        } else if (isTableroLleno()) {
+        } else if (TableroLleno()) {
             System.out.println("Empate");
+            storeResult("Empate");
             Anular(); // Desactiva todos los botones
         }
-
-
     }
 
     boolean checkWinner(String player) {
@@ -125,12 +137,14 @@ public class TictacControl {
         turno = true;
         juegoActivo = true;
 
+
     }
 
     @FXML
     public void Anular() {
         activarDesactivar(true);
         juegoActivo = false;
+
 
     }
 
@@ -154,25 +168,35 @@ public class TictacControl {
         }
     }
 
-    private boolean isTableroLleno() {
+    private boolean TableroLleno() {
         for (Button[] fila : tablero) {
             for (Button btn : fila) {
                 if (btn.getText().isEmpty()) {
-                    return false; //Si hay un botón vacío el tablero no está lleno
+                    return false;
                 }
             }
         }
-        return true; //Todos los botones están llenos
+        return true;
+    }
+    private void storeResult(String winner) {
+        String nom1 = jug1.getText();
+        String nom2 = jug2.getText();
+
+        TicTO ticTO = new TicTO();
+        ticTO.setNombrePartida("Partida " + (ticTOList.size() + 1));
+        ticTO.setNombreJugador1(nom1);
+        ticTO.setNombreJugador2(nom2);
+        ticTO.setGanador(winner.equals("X") ? nom1+" "+"Ganador" : winner.equals("O") ? nom2+" "+"Ganador"   : "Empate");
+        ticTO.setPunto(winner.equals("X") ? 1: winner.equals("O") ? 1: 0 );
+        if (winner.equals("Anulado")) {
+            ticTO.setEstado("Anulado");
+        } else if (winner.equals("X") || winner.equals("O") || winner.equals("Empate")) {
+            ticTO.setEstado("Finalizado");
+        }
+        ticTOList.add(ticTO);
     }
 
-    @FXML
-    TableView<TicTO> tableView;
 
-    @FXML
-    TableColumn<TicTO, String> nomP, nom1, nom2, nomG, Punt, Estad;
-
-    private ObservableList<TicTO> ticTOList;
-    private int inexEdit = -1;
 
 
 }

@@ -1,42 +1,59 @@
 package pe.edu.upeu._enraya.modelo;
 
 public class TicTO {
-    private String nomP;   // Cambié nomp a nomP
-    private String nom1;
-    private String nom2;
-    private String nomG;   // Cambié nomgan a nomG
-    private String punt;
-    private String estad;  // Cambié Estad a estad
+    private String   nombrePartida;
+    private String nombreJugador1;
+    private String nombreJugador2;
+    private String ganador;
+    private int punto;
+    private String estado;
 
-    // Getters y Setters
-
-    public String getNomP() { return nomP; }
-    public void setNomP(String nomP) { this.nomP = nomP; }
-
-    public String getNom1() { return nom1; }
-    public void setNom1(String nom1) { this.nom1 = nom1; }
-
-    public String getNom2() { return nom2; }
-    public void setNom2(String nom2) { this.nom2 = nom2; }
-
-    public String getNomG() { return nomG; }
-    public void setNomG(String nomG) { this.nomG = nomG; }
-
-    public String getPunt() { return punt; }
-    public void setPunt(String punt) { this.punt = punt; }
-
-    public String getEstad() { return estad; }
-    public void setEstad(String estad) { this.estad = estad; }
-
-    @Override
-    public String toString() {
-        return "TicTO{" +
-                "nomP='" + nomP + '\'' +
-                ", nom1='" + nom1 + '\'' +
-                ", nom2='" + nom2 + '\'' +
-                ", nomG='" + nomG + '\'' +
-                ", punt='" + punt + '\'' +
-                ", estad='" + estad + '\'' +
-                '}';
+    public String getNombrePartida() {
+        return nombrePartida;
     }
+
+    public void setNombrePartida(String nombrePartida) {
+        this.nombrePartida = nombrePartida;
+    }
+
+    public String getNombreJugador1() {
+        return nombreJugador1;
+    }
+
+    public void setNombreJugador1(String nombreJugador1) {
+        this.nombreJugador1 = nombreJugador1;
+    }
+
+    public String getNombreJugador2() {
+        return nombreJugador2;
+    }
+
+    public void setNombreJugador2(String nombreJugador2) {
+        this.nombreJugador2 = nombreJugador2;
+    }
+
+    public String getGanador() {
+        return ganador;
+    }
+
+    public void setGanador(String ganador) {
+        this.ganador = ganador;
+    }
+
+    public int getPunto() {
+        return punto;
+    }
+
+    public void setPunto(int punto) {
+        this.punto = punto;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
 }
